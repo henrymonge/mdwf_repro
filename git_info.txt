@@ -1,0 +1,7 @@
+chroma: 0bdbfce1402c19a0d60d3be6ec3910e76e05d258 (2024-09-13)
+qdpxx : 7a4bd2c2f021b0c7e3a15d48b917d75cceaff3eb ( 2023-03-03)
+qmp   : 3010fef5b5784b3e6eeec9fff38cb9954a28ad42 (2021-11-03)
+quda  : 3414317269e568e50313680cff225c4591ec082e (2024-11-05) 
+lalibe: 875f01c262c9ac5e2da281b1cba4b9921c2997dc (2024-10-3)
+
+LaLiBE repo https://github.com/callat-qcd/lalibe

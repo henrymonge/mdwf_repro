@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<lalibe>
+<Param>
+  <InlineMeasurements>
+
+<elem>
+  <Name>QEDM_PRODUCT_FIELD</Name>
+  <Frequency>1</Frequency>
+  <Param>
+    <external_field>./nt64nx24ny24nz24beta1xi0m0.1258-540.bin</external_field>
+    <quark_type>up</quark_type>
+    <coupling>3.0282212096456423e-01</coupling>
+  </Param>
+  <NamedObject>
+    <gauge_in_id>default_gauge_field</gauge_in_id>
+    <gauge_out_id>U_field</gauge_out_id>
+  </NamedObject>
+</elem>
+
+<elem>
+<Name>MAKE_SOURCE</Name>
+<Frequency>1</Frequency>
+<Param>
+<version>6</version>
+<Source>
+    <version>1</version>
+    <SourceType>SHELL_SOURCE</SourceType>
+    <j_decay>3</j_decay>
+    <t_srce>22 13 20 31</t_srce>
+    <SmearingParam>
+        <wvf_kind>GAUGE_INV_GAUSSIAN</wvf_kind>
+        <wvf_param>3.0</wvf_param>
+        <wvfIntPar>30</wvfIntPar>
+        <no_smear_dir>3</no_smear_dir>
+    </SmearingParam>
+</Source>
+</Param>
+<NamedObject>
+  <gauge_id>U_field</gauge_id>
+  <source_id>src_a12m310_a_3000_gf1.0_w3.0_n30_x22y13z20t31_mg0.1258_qe1.0_U</source_id>
+</NamedObject>
+</elem>
+
+<elem>
+<Name>PROPAGATOR</Name>
+<Frequency>1</Frequency>
+<Param>
+<version>10</version>
+<quarkSpinType>FULL</quarkSpinType>
+<obsvP>true</obsvP>
+<q_mp_id>prop_a12m310_a_3000_gf1.0_w3.0_n30_M51.2_L58_a1.50_mq0.0126_x22y13z20t31_mg0.1258_qe1.0_U_MP</q_mp_id>
+<numRetries>1</numRetries>
+<FermionAction>
+<FermAct>UNPRECONDITIONED_NEF</FermAct>
+  <OverMass>1.2</OverMass>
+  <N5>8</N5>
+  <b5>1.25</b5>
+  <c5>0.25</c5>
+  <Mass>0.0126</Mass>
+  <FermionBC>
+    <FermBC>SIMPLE_FERMBC</FermBC>
+    <boundary>1 1 1 -1</boundary>
+  </FermionBC>
+</FermionAction>
+<InvertParam>
+<invType>QUDA_NEF_INVERTER</invType>
+<DoCGNR>true</DoCGNR>
+<MaxIter>4000</MaxIter>
+<RsdTarget>1.e-7</RsdTarget>
+<Delta>0.1</Delta>
+<RsdToleranceFactor>80</RsdToleranceFactor>
+<MaxResIncrease>1</MaxResIncrease>
+<SolverType>CG</SolverType>
+<Verbose>false</Verbose>
+<AsymmetricLinop>false</AsymmetricLinop>
+<CudaReconstruct>RECONS_NONE</CudaReconstruct>
+<CudaSloppyPrecision>HALF</CudaSloppyPrecision>
+<CudaSloppyReconstruct>RECONS_NONE</CudaSloppyReconstruct>
+<AxialGaugeFix>false</AxialGaugeFix>
+<AutotuneDslash>true</AutotuneDslash>
+<MatPCType>EVEN_EVEN</MatPCType>
+<checkSolution>true</checkSolution>
+<NEFParams>
+  <OverMass>1.2</OverMass>
+  <N5>8</N5>
+  <b5>1.25</b5>
+  <c5>0.25</c5>
+  <Mass>0.0126</Mass>
+  <clovCoeff>0</clovCoeff>
+</NEFParams>
+<AntiPeriodicT>true</AntiPeriodicT>
+</InvertParam>
+</Param>
+<NamedObject>
+  <gauge_id>U_field</gauge_id>
+  <source_id>src_a12m310_a_3000_gf1.0_w3.0_n30_x22y13z20t31_mg0.1258_qe1.0_U</source_id>
+  <prop_id>prop_a12m310_a_3000_gf1.0_w3.0_n30_M51.2_L58_a1.50_mq0.0126_x22y13z20t31_mg0.1258_qe1.0_U</prop_id>
+</NamedObject>
+<xml_file>./prop_a12m310_a_3000_gf1.0_w3.0_n30_M51.2_L58_a1.50_mq0.0126_x22y13z20t31_mg0.1258_qe1.0_U.out.xml</xml_file>
+</elem>
+
+<elem>
+<Name>QIO_WRITE_ERASE_NAMED_OBJECT</Name>
+<Frequency>1</Frequency>
+<NamedObject>
+  <object_id>prop_a12m310_a_3000_gf1.0_w3.0_n30_M51.2_L58_a1.50_mq0.0126_x22y13z20t31_mg0.1258_qe1.0_U</object_id>
+  <object_type>LatticePropagatorF</object_type>
+</NamedObject>
+<File>
+  <file_name>./prop_a12m310_a_3000_gf1.0_w3.0_n30_M51.2_L58_a1.50_mq0.0126_x22y13z20t31_mg0.1258_qe1.0_U</file_name>
+  <file_volfmt>SINGLEFILE</file_volfmt>
+  <parallel_io>true</parallel_io>
+</File>
+</elem>
+
+  </InlineMeasurements>
+   <nrow>24 24 24 64</nrow>
+</Param>
+
+<Cfg>
+ <cfg_type>SCIDAC</cfg_type>
+ <cfg_file>./l2464f211b600m0102m0509m635a.3000_wflow1.0.lime</cfg_file>
+  <parallel_io>true</parallel_io>
+</Cfg>
+</lalibe>
